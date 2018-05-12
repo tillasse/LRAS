@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<project name="ExportData" basedir=".">
+<property name="project.dir" value="C:\Temp"/>
+<property name="project.dbms" value="ORA"/>
+<property name="project.jndiname" value="Merck Global"/>
+<property name="zipname" value="C:\Temp\Merck Global_CTT_Y.X.Z.zip"/>
+<target name="Merck Global_20180420">
+  <exportXML dir="${project.dir}" zipfile="${zipname}" logimport="true">
+  <connection dbms="${project.dbms}" jndiname="${project.jndiname}"/>
+    <sdi sdcid="LV_LabelMethod" keyid1="StabBatchSmall;StabBatchLarge" keyid2="1;1" file="LV_LabelMethod.xml" primaryforceupdate="true" detailforceupdate="true" exportdetails="false" exportsdidetails="false" exportroles="false"/>
+  </exportXML>
+</target>
+</project>
